@@ -1,0 +1,4 @@
+.DS_Store
+build/
+*.o
+requiem.novaextension/Syntaxes/*.dylib

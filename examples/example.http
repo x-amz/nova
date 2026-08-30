@@ -1,0 +1,67 @@
+# Every construct the queries cover, in one file.
+@host = https://echo.http.vet
+@token = {{$uuid}}
+
+### Request line, headers, placeholders
+# @name anything
+GET {{host}}/anything HTTP/1.1
+Accept: application/json
+X-Token: {{token}}
+
+### JSON body
+POST {{host}}/anything
+Content-Type: application/json
+
+{
+  "hello": "world",
+  "count": 1
+}
+
+### XML body
+POST {{host}}/anything
+Content-Type: application/xml
+
+<note>
+  <to>req</to>
+</note>
+
+### Inline response
+GET {{host}}/status/204
+
+HTTP/1.1 204 No Content
+Date: Sat, 30 Aug 2026 00:00:00 GMT
+
+### Inline response with a body
+GET {{host}}/json
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "slideshow": {
+    "title": "Sample Slide Show"
+  }
+}
+
+### A wire message sent as a body
+POST {{host}}/
+Content-Type: message/http
+
+GET /anything HTTP/1.1
+Host: example.com
+Accept: application/json
+
+### The echo answers with the request's own octets
+POST {{host}}/anything
+Content-Type: application/json
+
+{"a": 1}
+
+HTTP/1.1 200 OK
+Content-Type: message/http
+
+POST /anything HTTP/1.1
+Host: 100.22.164.63
+Content-Type: application/json
+
+{"a": 1}

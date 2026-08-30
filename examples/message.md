@@ -1,0 +1,20 @@
+# Embedded language sample
+
+`.http` syntax _inside markdown_ 
+is also **highlighted**.
+
+``` http
+GET /anything HTTP/1.1
+Host: example.com
+Accept: application/json
+X-Trace: 8f1c
+
+HTTP/1.1 200 OK
+Date: Sat, 30 Aug 2026 00:00:00 GMT
+Content-Type: application/json
+Content-Length: 23
+
+{
+  "hello": "world"
+}
+```

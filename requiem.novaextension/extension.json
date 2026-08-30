@@ -1,0 +1,13 @@
+{
+    "identifier": "dev.amz.requiem",
+    "name": "requiem",
+    "organization": "X-AMZ LLC",
+    "description": ".http files in Nova: syntax highlighting, folding, symbols, and bodies colored in their own language.",
+    "version": "0.1.0",
+    "categories": ["languages"],
+    "license": "MIT",
+    "homepage": "https://requiem.rest",
+    "repository": "https://github.com/x-amz/nova",
+    "bugs": "https://github.com/x-amz/nova/issues",
+    "min_runtime": "10.0"
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syntax name="http_message" subsyntax="true">
+    <meta>
+        <name>HTTP wire message</name>
+        <type>structured</type>
+    </meta>
+
+    <detectors />
+
+    <injection>
+        <expression>^(http_message|message/http)$</expression>
+    </injection>
+
+    <tree-sitter language="http_message">
+        <highlights path="http_message/highlights.scm" />
+        <injections path="http_message/injections.scm" />
+    </tree-sitter>
+</syntax>

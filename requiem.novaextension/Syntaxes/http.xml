@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syntax name="http">
+    <meta>
+        <name>HTTP</name>
+        <type>structured</type>
+        <preferred-file-extension>http</preferred-file-extension>
+    </meta>
+
+    <detectors>
+        <extension priority="1.0">http,rest</extension>
+    </detectors>
+
+    <comments>
+        <single>
+            <expression>#</expression>
+        </single>
+    </comments>
+
+    <injection>
+        <expression>^\.?http$</expression>
+    </injection>
+
+    <tree-sitter language="http">
+        <highlights path="http/highlights.scm" />
+        <folds path="http/folds.scm" />
+        <symbols path="http/symbols.scm" />
+        <injections path="http/injections.scm" />
+    </tree-sitter>
+</syntax>
